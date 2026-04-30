@@ -58,13 +58,13 @@ dataShapes.push(shape)
   // TODO 3-a: add a function that handles the static display type
   function handleStatic(data) {
     setBackgroundWithObject(data);
-    animalsDetails.displayType = 1;
+    animationDetails.displayType = 1;
   }
 handleStatic(dataShapes[currentIndex]);
   // TODO 4-a: add a function that handles the good display type
   function handleGood(color, shape, repeat){
     setBackgroundWithSimple(color, shape, repeat);
-    animalsDetails.displayType = 2;
+    animationDetails.displayType = 2;
   }
 let currentShape = dataShapes[currentIndex];
 handleGood(currentShape.color, currentShape.shape, currentShape.repeat);
