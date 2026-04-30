@@ -40,7 +40,7 @@ $(document).ready(function () {
     shape: "circle",
     repeat: 3
   }
-dataShapes.push()
+dataShapes.push(shape)
   // TODO 2: add a new property to all data shapes
   for (let i = 0; i < dataShapes.length; i++){
     let currentShape = dataShapes[i];
@@ -60,13 +60,14 @@ dataShapes.push()
     setBackgroundWithObject(data);
     animalsDetails.displayType = 1;
   }
-
+handleStatic(dataShapes[currentIndex]);
   // TODO 4-a: add a function that handles the good display type
   function handleGood(color, shape, repeat){
     setBackgroundWithSimple(color, shape, repeat);
     animalsDetails.displayType = 2;
   }
-
+let currentShape = dataShapes[currentIndex];
+handleGood(currentShape.color, currentShape.shape, currentShape.repeat);
   // TODO 5-a: add a function that handles the bad display type
   function handleBad(data, repeat) {
   repeat = repeat + 1;
